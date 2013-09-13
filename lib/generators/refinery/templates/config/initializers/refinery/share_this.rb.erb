@@ -1,0 +1,28 @@
+# encoding: utf-8
+Refinery::ShareThis.configure do |config|
+
+  # Identificator for share_this
+  config.publisher = ''
+
+  # config.doNotHash = <%= Refinery::ShareThis.doNotHash.inspect %>
+  # config.doNotCopy = <%= Refinery::ShareThis.doNotCopy.inspect %>
+  # config.hashAddressBar = <%= Refinery::ShareThis.hashAddressBar.inspect %>
+  # config.switchTo5x = <%= Refinery::ShareThis.switchTo5x.inspect %>
+  # config.button_type = <%= Refinery::ShareThis.button_type.inspect %>
+
+  # buttons: <%= Refinery::ShareThis.buttons.inspect %>
+  # config.buttons = <%= Refinery::ShareThis.buttons.inspect %>
+
+  # if you want display on page multiple independent share buttons put custom
+  # button options above under namespace.
+  # Example:
+  #
+  # config.namespaces = {
+  #   blog_post: {
+  #     buttons: { facebook: "Facebook" },
+  #     button_type: 'large'
+  #   }
+  # }
+  # config.namespaces = <%= Refinery::ShareThis.namespaces.inspect %>
+end
+

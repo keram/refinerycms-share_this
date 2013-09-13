@@ -1,0 +1,26 @@
+<%
+  namespace ||= ''
+  config ||= {
+    publisher: Refinery::ShareThis.publisher,
+    doNotHash: Refinery::ShareThis.doNotHash,
+    doNotCopy: Refinery::ShareThis.doNotCopy,
+    switchTo5x: Refinery::ShareThis.switchTo5x,
+    hashAddressBar: Refinery::ShareThis.hashAddressBar,
+    buttons: Refinery::ShareThis.buttons,
+    button_type: Refinery::ShareThis.button_type
+  }
+
+  if namespace.present? && Refinery::ShareThis.namespaces.include?(namespace)
+    config.merge!(Refinery::ShareThis.namespaces[namespace])
+  end
+
+  buttons = config.delete(:buttons)
+  button_type = config.delete(:button_type)
+-%>
+<div class="share-this-buttons"
+    id="share-this<%= "-#{namespace}" if namespace.present? %>"
+    data-share_this="<%= config.to_json %>">
+  <% buttons.each do |key, title| %>
+  <%= %Q(<span class="st_#{key}_#{button_type}" displayText="#{title}"></span>).html_safe %>
+  <% end -%>
+</div>
