@@ -2,8 +2,8 @@
   "name": "refinerycms-share_this",
   "description": "ShareThis plugin for Refinery CMS",
   "version": "0.0.1",
-  "homepage": "https://github.com/keram-refinery/refinerycms-share_this",
-  "bugs": "https://github.com/keram-refinery/refinerycms-share_this/issues",
+  "homepage": "https://github.com/keram/refinerycms-share_this",
+  "bugs": "https://github.com/keram/refinerycms-share_this/issues",
   "author": {
     "name": "Marek L.",
     "email": "nospam.keram@gmail.com",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/keram-refinery/refinerycms-share_this.git"
+    "url": "git://github.com/keram/refinerycms-share_this.git"
   },
   "licenses": [{
     "type": "MIT",

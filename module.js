@@ -5,15 +5,15 @@ var dir = __dirname,
     build_dir = dir + '/app/assets',
     grunt = {
         'watch' : [{
-            'base_js' : {
+            'js' : {
                 'files': [scripts_dir + '/*.js'],
-                'tasks': ['closureCompiler:refinerycms-share_this_base_js',
-                            'concat:refinerycms-share_this_base_js',
+                'tasks': ['closureCompiler:refinerycms-share_this_js',
+                            'concat:refinerycms-share_this_js',
                             'copy:refinerycms-share_this_js']
             }
         }],
         'closureCompiler': [{
-            'base_js' : {
+            'js' : {
                 'options': {
                     'checkModified': true,
                     'compilerOpts': {
@@ -35,15 +35,15 @@ var dir = __dirname,
                 'src': [
                     'scripts/share_this.js'
                 ],
-                'dest': '.tmp/assets/javascripts/refinery/share_this.min.js'
+                'dest': '.tmp/assets/javascripts/share_this.min.js'
             }
         }],
         'concat': [{
-            'base_js' : {
+            'js' : {
                 'src': [
                     'scripts/share_this.js'
                 ],
-                'dest': '.tmp/assets/javascripts/refinery/share_this.all.js'
+                'dest': '.tmp/assets/javascripts/share_this.all.js'
             }
         }],
         'copy': [{
@@ -52,7 +52,7 @@ var dir = __dirname,
                     'expand': true,
                     'dot': true,
                     'cwd': dir + '/.tmp/assets/javascripts/',
-                    'dest': build_dir + '/javascripts/',
+                    'dest': build_dir + '/javascripts/refinery/share_this/',
                     'src': [
                         '**'
                     ]

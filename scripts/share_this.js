@@ -7,7 +7,7 @@
 
     /**
      * @constructor
-     * @class refinery.extern.ShareThis
+     * @class refinery.share_this.ShareThis
      * @expose
      * @extends {refinery.Object}
      */
@@ -15,7 +15,7 @@
 
         name: 'ShareThis',
 
-        module: 'extern',
+        module: 'share_this',
 
         options: {
 
@@ -104,7 +104,7 @@
         var share_this_holder = holder.find('.share-this-buttons');
 
         if (share_this_holder.length > 0) {
-            refinery('extern.ShareThis').init(share_this_holder);
+            refinery('share_this.ShareThis').init(share_this_holder);
         }
     };
 }(window, refinery));
