@@ -76,7 +76,7 @@
         init: function (holder) {
             if (this.is('initialisable')) {
                 this.is('initialising', true);
-                this.attach_holder(holder);
+                this.holder = holder;
 
                 this.load();
 
@@ -95,16 +95,11 @@
      * @param  {jQuery} holder
      * @return {undefined}
      */
-    refinery.ui.share_this = function (holder) {
-        /**
-         * ShareThis dom holder
-         *
-         * @type {jQuery}
-         */
-        var share_this_holder = holder.find('.share-this-buttons');
-
-        if (share_this_holder.length > 0) {
-            refinery('share_this.ShareThis').init(share_this_holder);
-        }
+    refinery.ui.share_this = function (holder, ui) {
+        holder.find('.share-this-buttons').each(function () {
+            ui.addObject(
+                refinery('share_this.ShareThis').init($(this))
+            );
+        });
     };
 }(window, refinery));
